@@ -12,7 +12,4 @@ Forked project for create a personal schema to learning pcf8574.
 ## Preforated board
 I'm using preforated board to doing some test.
 
-![Preforated over](https://github.com/xreef/LiquidCrystal_I2C/blob/master/resources/SchemaLCD_i2c_pcb.png)
-![Preforated down](https://github.com/xreef/LiquidCrystal_I2C/blob/master/resources/SchemaLCD_i2c_pcb.png)
-
-![Preforated with LCD](https://github.com/xreef/LiquidCrystal_I2C/blob/master/resources/SchemaLCD_i2c_pcb.png)
+![Preforated over](https://github.com/xreef/LiquidCrystal_I2C/blob/master/resources/preforatedUp.jpg)
