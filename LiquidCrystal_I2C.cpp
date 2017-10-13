@@ -88,19 +88,19 @@ void LiquidCrystal_I2C::begin(uint8_t cols, uint8_t lines, uint8_t dotsize) {
 	// figure 24, pg 46
 	
 	  // we start in 8bit mode, try to set 4 bit mode
-   write4bits(0x03 << 4);
+   write4bits(0x03);
    delayMicroseconds(4500); // wait min 4.1ms
    
    // second try
-   write4bits(0x03 << 4);
+   write4bits(0x03);
    delayMicroseconds(4500); // wait min 4.1ms
    
    // third go!
-   write4bits(0x03 << 4); 
+   write4bits(0x03); 
    delayMicroseconds(150);
    
    // finally, set to 4-bit interface
-   write4bits(0x02 << 4); 
+   write4bits(0x02); 
 
 
 	// set # lines, font size, etc.
@@ -214,15 +214,6 @@ void LiquidCrystal_I2C::createChar(uint8_t location, uint8_t charmap[]) {
 	}
 }
 
-//createChar with PROGMEM input
-void LiquidCrystal_I2C::createChar(uint8_t location, const char *charmap) {
-	location &= 0x7; // we only have 8 locations 0-7
-	command(LCD_SETCGRAMADDR | (location << 3));
-	for (int i=0; i<8; i++) {
-	    	write(pgm_read_byte_near(charmap++));
-	}
-}
-
 // Turn the (optional) backlight off/on
 void LiquidCrystal_I2C::noBacklight(void) {
 	_backlightval=LCD_NOBACKLIGHT;
@@ -247,9 +238,9 @@ inline void LiquidCrystal_I2C::command(uint8_t value) {
 
 // write either command or data
 void LiquidCrystal_I2C::send(uint8_t value, uint8_t mode) {
-	uint8_t highnib=value&0xf0;
-	uint8_t lownib=(value<<4)&0xf0;
-       write4bits((highnib)|mode);
+	uint8_t highnib=value>>4;
+	uint8_t lownib=value & 0x0F;
+    write4bits((highnib)|mode);
 	write4bits((lownib)|mode); 
 }
 
