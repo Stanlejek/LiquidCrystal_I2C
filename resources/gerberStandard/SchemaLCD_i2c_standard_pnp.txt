@@ -1,0 +1,29 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=SchemaLCD_i2c_standard
+*Date=22:43:18
+*CreatedBy=Fritzing 0.9.3b.04.19.5c895d327c44a3114e5fcc9d8260daf0cbb52806
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;THT;43.3968;-22.0497;0;Bottom;J2
+2;;;33.2368;-5.53971;0;Bottom;Hole3
+3;;;29.1636;-2.45316;0;Bottom;TXT1
+4;;TO92 [THT];40.9457;-5.34921;-90;Bottom;Q1
+5;;;23.2506;-25.6488;0;Bottom;TXT2
+6;;;34.7605;-12.9322;0;Bottom;LCD1
+7;;trimpot_pth_s3_lock_3386P;7.68436;-7.97811;180;Bottom;R3
+8;;;43.3968;-17.24;0;Bottom;Hole2
+9;;DIP16 [THT];26.8817;-14.4577;-90;Bottom;U2
+10;;THT;43.3968;-11.8897;0;Bottom;J1
+11;;;2.75676;-31.9394;0;Bottom;Hole1
+12;;;15.4568;-8.07971;0;Bottom;Jumper3
+13;;;33.2368;-23.3197;0;Bottom;Jumper1
+14;;;33.2368;-20.7797;0;Bottom;Jumper2
